@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-50">
         <div class="card p-4 shadow-lg" style="width: 350px;">
             
             <!-- Logo -->
@@ -17,17 +17,13 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
-                <!-- student_number Address -->
                 <div class="form-group">
-                    <x-input-label for="student_number" :value="__('Student Number')" />
-                    <x-text-input id="student_number" class="form-control" type="text" name="student_number" :value="old('student_number')" required autofocus />
+                    <x-text-input id="student_number" class="form-control" type="text" name="student_number" placeholder="Student Number" required />
                     <x-input-error :messages="$errors->get('student_number')" class="mt-2" />
                 </div>
-
-                <!-- Password -->
+                
                 <div class="form-group">
-                    <x-input-label for="password" :value="__('Password')" />
-                    <x-text-input id="password" class="form-control" type="password" name="password" required />
+                    <x-text-input id="password" class="form-control" type="password" name="password" placeholder="Password" required />
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
@@ -53,7 +49,7 @@
                 <!-- Forgot Password & Register -->
                 <div class="text-center mt-3">
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-secondary small">Forgot your password?</a>
+                        <a href="{{ route('password.request') }}" class="text-primary">Forgot your password?</a>
                     @endif
                     <p class="mt-2">Don’t have an Account? <a href="{{ route('register') }}" class="text-success font-weight-bold">Create Account</a></p>
                 </div>

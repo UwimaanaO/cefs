@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -31,13 +30,19 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'student_number' => ['required', 'string', 'unique:users', 'max:255'], // Added validation for student_number
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users'], // Ensure email is unique
+            'telephone' => ['required', 'string', 'unique:users', 'max:255'], // Added validation for telephone
+            'college' => ['required', 'string', 'max:255'], // Added validation for college
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'student_number' => $request->student_number, // Save the student_number
             'email' => $request->email,
+            'telephone' => $request->telephone, // Save the telephone number
+            'college' => $request->college, // Save the college
             'password' => Hash::make($request->password),
         ]);
 
@@ -48,3 +53,4 @@ class RegisteredUserController extends Controller
         return redirect(route('dashboard', absolute: false));
     }
 }
+?>
