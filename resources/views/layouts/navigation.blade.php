@@ -1,3 +1,54 @@
+<style>
+.sidebar {
+margin: 0;
+padding: 0;
+width: 200px;
+background-color: #f1f1f1;
+position: fixed;
+height: 100%;
+overflow: auto;
+}
+
+.sidebar a {
+display: block;
+color: black;
+padding: 16px;
+text-decoration: none;
+}
+
+.sidebar a.active {
+background-color: green;
+color: white;
+}
+
+.sidebar a:hover:not(.active) {
+background-color: #555;
+color: white;
+}
+
+div.content {
+margin-left: 200px;
+padding: 1px 16px;
+height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+.sidebar {
+width: 100%;
+height: auto;
+position: relative;
+}
+.sidebar a {float: left;}
+div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+.sidebar a {
+text-align: center;
+float: none;
+}
+}
+</style>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,3 +151,12 @@
         </div>
     </div>
 </nav>
+<div class="row">
+    <div class="col-md-3">
+    <div class="sidebar">
+        <a class="active" href="">Home</a>
+        <a href="{{url('')}}">Complaint</a>
+        <a href="{{url('')}}">Feedback</a>
+        <a href="{{url('')}}">FAQs</a>
+      </div>
+    </div>
