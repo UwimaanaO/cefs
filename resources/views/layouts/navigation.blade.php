@@ -6,7 +6,9 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <div class="text-center">
+                            <img src="{{ asset('images/cefs logo.png') }}" alt="CEFS Logo" style="width: 50px;" class="mx-auto d-block">
+                        </div>
                     </a>
                 </div>
 
