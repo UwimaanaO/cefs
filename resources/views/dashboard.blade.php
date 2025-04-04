@@ -5,7 +5,7 @@
     
         <div class="row justify-content-center">
             <!-- Complaints Submitted -->
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin-top:2%">
                 <div class="card text-white shadow-sm border-0 text-center p-4 mx-auto mb-3" 
                      style="background-color: #007bff; border-radius: 12px; width: 250px;">
                     <i class="fas fa-comments fa-2x"></i>
@@ -15,7 +15,7 @@
             </div>
     
             <!-- Complaints Resolved -->
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin-top:2%">
                 <div class="card text-white shadow-sm border-0 text-center p-4 mx-auto mb-3" 
                      style="background-color: #28a745; border-radius: 12px; width: 250px;">
                     <i class="fas fa-check-circle fa-2x"></i>
@@ -25,7 +25,7 @@
             </div>
     
             <!-- Pending Complaints -->
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin-top:2%">
                 <div class="card text-white shadow-sm border-0 text-center p-4 mx-auto mb-3" 
                      style="background-color: #ffc107; border-radius: 12px; width: 250px;">
                     <i class="fas fa-exclamation-triangle fa-2x"></i>

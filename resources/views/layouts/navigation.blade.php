@@ -1,12 +1,16 @@
 <style>
-.sidebar {
-margin: 0;
-padding: 0;
-width: 200px;
-background-color: #f1f1f1;
-position: fixed;
-height: 100%;
-overflow: auto;
+    .sidebar {
+    width: 250px; /* Fixed width */
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.content {
+    margin-left: 250px; /* Push content so it doesn’t get covered */
 }
 
 .sidebar a {
@@ -87,6 +91,7 @@ float: none;
                     </x-slot>
 
                     <x-slot name="content">
+                        
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
