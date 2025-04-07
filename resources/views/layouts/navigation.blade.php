@@ -160,8 +160,8 @@ float: none;
     <div class="col-md-3">
     <div class="sidebar">
         <a class="active" href="">Home</a>
-        <a href="{{url('')}}">Complaint</a>
-        <a href="{{url('')}}">Feedback</a>
-        <a href="{{url('')}}">FAQs</a>
+        <a href="{{route('complaint.index')}}">Complaint</a>
+        <a href="{{url('feedback')}}">Feedback</a>
+        <a href="{{url('faqs')}}">FAQs</a>
       </div>
     </div>
