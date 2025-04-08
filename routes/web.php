@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ComplaintController;
@@ -23,5 +24,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/complaint', [ComplaintController::class, 'index'])->name('complaint.index');
 });
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
+});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/faqs', [FeedbackController::class, 'index'])->name('feedback.index');
+});
 require __DIR__ . '/auth.php';
