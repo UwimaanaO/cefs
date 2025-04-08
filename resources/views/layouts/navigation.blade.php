@@ -162,6 +162,6 @@ float: none;
         <a class="active" href="">Home</a>
         <a href="{{route('complaint.index')}}">Complaint</a>
         <a href="{{route('feedback.index')}}">Feedback</a>
-        <a href="{{url('faqs')}}">FAQs</a>
+        <a href="{{route('faqs.index')}}">FAQs</a>
       </div>
     </div>

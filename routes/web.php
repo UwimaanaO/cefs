@@ -1,9 +1,10 @@
 <?php
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\DashboardController;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -28,6 +29,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 });
 Route::middleware(['auth'])->group(function () {
-    Route::get('/faqs', [FeedbackController::class, 'index'])->name('feedback.index');
+    Route::get('/faqs', [FaqsController::class, 'index'])->name('faqs.index');
 });
 require __DIR__ . '/auth.php';
